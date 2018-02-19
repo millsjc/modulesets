@@ -43,7 +43,6 @@ echo "branches['lalinspiral'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhb
 echo "branches['lalsimulation'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['lalinference'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['lalapps'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
-echo "branches['glue'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['pylal'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['ligo'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "" >> ~/pe/.config/pe.jhbuildrc
