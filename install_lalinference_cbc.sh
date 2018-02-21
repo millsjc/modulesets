@@ -43,6 +43,9 @@ echo "branches['lalinspiral'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhb
 echo "branches['lalsimulation'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['lalinference'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['lalapps'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
+echo "#On git.ligo.org, glue is it's own repository. 4b8439af2736804b23859d6b874b60d7edd938c3 is" >> ~/pe/.config/pe.jhbuildrc
+echo "# the latest commit for glue that was on the lalinference_o2 branch before the split." >> ~/pe/.config/pe.jhbuildrc
+echo "branches['glue'] = (None,'4b8439af2736804b23859d6b874b60d7edd938c3')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['pylal'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "branches['ligo'] = (None,'lalinference_o2')" >> ~/pe/.config/pe.jhbuildrc
 echo "" >> ~/pe/.config/pe.jhbuildrc
@@ -66,7 +69,7 @@ echo "" >> ~/pe/.config/pe.jhbuildrc
 ~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc --no-interact tinderbox --output=$HOME/public_html/pe/build/ lalsuite
 
 # Move bayeswave as it gets build in source directory
-cp ~/pe/src/bayeswave/src/bayeswave ~/pe/local/bin/ 
+cp ~/pe/src/bayeswave/src/bayeswave ~/pe/local/bin/
 
 ## If needed, install additional packages:
 # ~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc run $SHELL --noprofile --norc
