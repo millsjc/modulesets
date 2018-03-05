@@ -148,7 +148,7 @@
   </distutils>
 
   <distutils id="glue">
-    <branch module="lscsoft/glue"/>
+    <branch module="lscsoft/lalsuite" subdir="glue"/>
   </distutils>
 
   <distutils id="gwcelery">
