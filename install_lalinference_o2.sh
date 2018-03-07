@@ -67,7 +67,7 @@ echo "" >> ~/pe/.config/pe.jhbuildrc
 ~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc --no-interact tinderbox --output=$HOME/public_html/pe/build/ lalsuite
 
 # Move bayeswave as it gets build in source directory
-cp ~/pe/src/bayeswave/src/bayeswave ~/pe/local/bin/
+cp ~/pe/src/bayeswave/src/bayeswave* ~/pe/local/bin/
 
 ## If needed, install additional packages:
 # ~/pe/.local/bin/jhbuild -f ~/pe/.config/jhbuildrc run $SHELL --noprofile --norc
