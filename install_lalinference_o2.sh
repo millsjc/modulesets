@@ -7,6 +7,7 @@ cd ~/pe
 # Download module sets for jhbuild
 if [ ! -d ~/pe/modulesets ]; then
   git clone git://github.com/vivienr/modulesets.git ~/pe/modulesets
+  git checkout lalinference_o2
 fi
 cd ~/pe/modulesets
 git pull
