@@ -27,7 +27,7 @@ And entering the preconfigured shell with `PATH`, `PKG_CONFIG_PATH`,
 Instructions
 ------------
 
-The `install_lalinference_cbc.sh` script contains all the commands for a standard
+To install the lalinference_o2 code version, the `install_lalinference_o2.sh` script in the `lalinference_o2` branch contains all the commands for a standard
 installation on the LIGO Data Grid and can be run as is:
 
     $ nohup ./install_lalinference_cbc.sh &
@@ -120,7 +120,7 @@ Details
   [here](https://ldas-jobs.ligo.caltech.edu/~cbc/pe/build/).
 
 - Source code for modules is checked out into `~/src` (or `~/pe/src` when using
-  `install_lalinference_cbc.sh`).
+  `install_lalinference_o2.sh`).
 
 - For packages that support building out-of-srcdir, the build directory is
   in `/usr1/$USER/build`, `/local/$USER/build`,
@@ -128,7 +128,7 @@ Details
   accommodate scratch storage locations on LSC data analysis clusters.
 
 - Packages are installed into `~/local` (or `~/pe/local` when using
-  `install_lalinference_cbc.sh`).
+  `install_lalinference_o2.sh`).
 
 - You will be reminded whenever you are inside the JHBuild environment shell
   by the colorized prompt beginning with the text `JHBuild:`.
