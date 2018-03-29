@@ -4,7 +4,7 @@
 <!-- vim:set ts=2 expandtab: -->
 <moduleset>
   <repository type="git" name="git.ligo.org"
-      href="https://git.ligo.org/" default="yes"/>
+      href="https://git.ligo.org/lscsoft/" default="yes"/>
   <repository type="git" name="ligo-cbc"
       href="https://github.com/ligo-cbc/"/>
   <repository type="tarball" name="software.ligo.org"
@@ -21,32 +21,32 @@
   and https://bugzilla.gnome.org/show_bug.cgi?id=689472 -->
 
   <autotools id="lal" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="lscsoft/lalsuite" subdir="lal"/>
+    <branch module="lalsuite" subdir="lal"/>
   </autotools>
 
   <autotools id="lalframe" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="lscsoft/lalsuite" subdir="lalframe"/>
+    <branch module="lalsuite" subdir="lalframe"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalmetaio" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="lscsoft/lalsuite" subdir="lalmetaio"/>
+    <branch module="lalsuite" subdir="lalmetaio"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalxml" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="lscsoft/lalsuite" subdir="lalxml"/>
+    <branch module="lalsuite" subdir="lalxml"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalinspiral" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="lscsoft/lalsuite" subdir="lalinspiral"/>
+    <branch module="lalsuite" subdir="lalinspiral"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -56,7 +56,7 @@
   </autotools>
 
   <autotools id="lalburst" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="lscsoft/lalsuite" subdir="lalburst"/>
+    <branch module="lalsuite" subdir="lalburst"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalmetaio"/>
@@ -65,14 +65,14 @@
   </autotools>
 
   <autotools id="lalsimulation" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-openmp">
-    <branch module="lscsoft/lalsuite" subdir="lalsimulation"/>
+    <branch module="lalsuite" subdir="lalsimulation"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalpulsar" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-openmp --enable-cfitsio">
-    <branch module="lscsoft/lalsuite" subdir="lalpulsar"/>
+    <branch module="lalsuite" subdir="lalpulsar"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalxml"/>
@@ -80,7 +80,7 @@
   </autotools>
 
   <autotools id="lalstochastic" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="lscsoft/lalsuite" subdir="lalstochastic"/>
+    <branch module="lalsuite" subdir="lalstochastic"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalmetaio"/>
@@ -88,7 +88,7 @@
   </autotools>
 
   <autotools id="lalinference" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '"  autogenargs="--enable-swig-python --enable-openmp">
-    <branch module="lscsoft/lalsuite" subdir="lalinference"/>
+    <branch module="lalsuite" subdir="lalinference"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -104,7 +104,7 @@
   </autotools>
 
   <autotools id="laldetchar" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '"  autogenargs="--enable-swig-python">
-    <branch module="lscsoft/lalsuite" subdir="laldetchar"/>
+    <branch module="lalsuite" subdir="laldetchar"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -115,7 +115,7 @@
   </autotools>
 
   <autotools id="lalapps" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-openmp --enable-mpi --enable-cfitsio">
-    <branch module="lscsoft/lalsuite" subdir="lalapps"/>
+    <branch module="lalsuite" subdir="lalapps"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -136,7 +136,7 @@
   </autotools>
 
   <distutils id="pylal">
-    <branch module="lscsoft/pylal"/>
+    <branch module="pylal"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -148,7 +148,7 @@
   </distutils>
 
   <distutils id="glue">
-    <branch module="lscsoft/glue"/>
+    <branch module="glue"/>
   </distutils>
 
   <distutils id="gwcelery">
@@ -156,11 +156,11 @@
   </distutils>
 
   <distutils id="lvalert">
-    <branch repo="git.ligo.org" module="lscsoft/lvalert.git"/>
+    <branch repo="git.ligo.org" module="lvalert.git"/>
   </distutils>
 
   <distutils id="gracedb">
-    <branch repo="git.ligo.org" module="lscsoft/gracedb-client.git"/>
+    <branch repo="git.ligo.org" module="gracedb-client.git"/>
     <dependencies>
       <dep package="glue"/>
     </dependencies>
@@ -198,7 +198,7 @@
   </metamodule>
 
   <autotools id="gstlal" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--without-doxygen">
-    <branch module="lscsoft/gstlal" subdir="gstlal"/>
+    <branch module="gstlal" subdir="gstlal"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -212,7 +212,7 @@
   </autotools>
 
   <autotools id="gstlal-ugly" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--without-doxygen">
-    <branch module="lscsoft/gstlal" subdir="gstlal-ugly"/>
+    <branch module="gstlal" subdir="gstlal-ugly"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -227,7 +227,7 @@
   </autotools>
 
   <autotools id="gstlal-inspiral"  autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--without-doxygen">
-    <branch module="lscsoft/gstlal" subdir="gstlal-inspiral"/>
+    <branch module="gstlal" subdir="gstlal-inspiral"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
