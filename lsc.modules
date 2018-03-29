@@ -21,32 +21,32 @@
   and https://bugzilla.gnome.org/show_bug.cgi?id=689472 -->
 
   <autotools id="lal" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="vivien/lalsuite" subdir="lal"/>
+    <branch module="lscsoft/lalsuite" subdir="lal"/>
   </autotools>
 
   <autotools id="lalframe" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="vivien/lalsuite" subdir="lalframe"/>
+    <branch module="lscsoft/lalsuite" subdir="lalframe"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalmetaio" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="vivien/lalsuite" subdir="lalmetaio"/>
+    <branch module="lscsoft/lalsuite" subdir="lalmetaio"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalxml" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="vivien/lalsuite" subdir="lalxml"/>
+    <branch module="lscsoft/lalsuite" subdir="lalxml"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalinspiral" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="vivien/lalsuite" subdir="lalinspiral"/>
+    <branch module="lscsoft/lalsuite" subdir="lalinspiral"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -56,7 +56,7 @@
   </autotools>
 
   <autotools id="lalburst" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="vivien/lalsuite" subdir="lalburst"/>
+    <branch module="lscsoft/lalsuite" subdir="lalburst"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalmetaio"/>
@@ -65,14 +65,14 @@
   </autotools>
 
   <autotools id="lalsimulation" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-openmp">
-    <branch module="vivien/lalsuite" subdir="lalsimulation"/>
+    <branch module="lscsoft/lalsuite" subdir="lalsimulation"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
   <autotools id="lalpulsar" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-openmp --enable-cfitsio">
-    <branch module="vivien/lalsuite" subdir="lalpulsar"/>
+    <branch module="lscsoft/lalsuite" subdir="lalpulsar"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalxml"/>
@@ -80,7 +80,7 @@
   </autotools>
 
   <autotools id="lalstochastic" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python">
-    <branch module="vivien/lalsuite" subdir="lalstochastic"/>
+    <branch module="lscsoft/lalsuite" subdir="lalstochastic"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalmetaio"/>
@@ -88,7 +88,7 @@
   </autotools>
 
   <autotools id="lalinference" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '"  autogenargs="--enable-swig-python --enable-openmp">
-    <branch module="vivien/lalsuite" subdir="lalinference"/>
+    <branch module="lscsoft/lalsuite" subdir="lalinference"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -104,7 +104,7 @@
   </autotools>
 
   <autotools id="laldetchar" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '"  autogenargs="--enable-swig-python">
-    <branch module="vivien/lalsuite" subdir="laldetchar"/>
+    <branch module="lscsoft/lalsuite" subdir="laldetchar"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -115,7 +115,7 @@
   </autotools>
 
   <autotools id="lalapps" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-openmp --enable-mpi --enable-cfitsio">
-    <branch module="vivien/lalsuite" subdir="lalapps"/>
+    <branch module="lscsoft/lalsuite" subdir="lalapps"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
