@@ -151,6 +151,17 @@
     <branch module="lscsoft/lalsuite" subdir="glue"/>
   </distutils>
 
+  <distutils id="o2-postprocessing">
+    <branch module="nathan-johnson-mcdaniel/o2-postprocessing" subdir="automated_postproc" hash="dd616630c3ce7f2cdf2269404eb5be0b1afc9e3e"/>
+    <dependencies>
+      <dep package="lal"/>
+      <dep package="lalsimulation"/>
+      <dep package="lalinference"/>
+      <dep package="pylal"/>
+      <dep package="glue"/>
+    </dependencies>
+  </distutils>
+
   <distutils id="gwcelery">
     <branch module="emfollow/gwcelery"/>
   </distutils>
@@ -194,6 +205,7 @@
       <dep package="gracedb"/>
       <dep package="lvalert"/>
       <dep package="bayeswave"/>
+      <dep package="o2-postprocessing"/>
     </dependencies>
   </metamodule>
 
