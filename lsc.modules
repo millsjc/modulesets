@@ -152,7 +152,7 @@
   </distutils>
 
   <distutils id="o2-postprocessing">
-    <branch module="nathan-johnson-mcdaniel/automated_postproc" hash="813f2ed5cf5717c108665b4493d573593c58d7f2"/>
+    <branch module="nathan-johnson-mcdaniel/automated_postproc" hash="db681ecd9b7fff139d2ddac4f5491f192ec33aa6"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalsimulation"/>
