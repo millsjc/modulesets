@@ -171,7 +171,7 @@
   </distutils>
 
   <distutils id="gracedb">
-    <branch repo="git.ligo.org" module="lscsoft/gracedb-client.git"/>
+    <branch repo="git.ligo.org" module="lscsoft/gracedb-client.git" tag="gracedb-1.28-1"/>
     <dependencies>
       <dep package="glue"/>
     </dependencies>
