@@ -2,11 +2,12 @@ JHBuild modulesets for LIGO and open-source astronomy software
 ==============================================================
 
 This is a collection of JHBuild (<https://live.gnome.org/Jhbuild>)
-modules for LIGO Parameter Estimation (LALInference).
+modules for LIGO Parameter Estimation (LALInference, <https://git.ligo.org/lscsoft/lalsuite>).
 
-It is a fork of Leo Singer's (<https://github.com/lpsinger/modulesets>) personal
-collection of JHBuild modules for automating build and installation of
-bleeding-edge packages for LIGO data analysis and open source astronomy.
+It is a fork of Leo Singer's (<https://github.com/lpsinger/modulesets>)
+personal collection of JHBuild modules for automating build and
+installation of bleeding-edge packages for LIGO data analysis and
+open source astronomy.
 
 As a taste, installing all of lalsuite and the attendant Python packages
 one-by-one becomes just:
@@ -23,19 +24,7 @@ And entering the preconfigured shell with `PATH`, `PKG_CONFIG_PATH`,
 
     $ jhbuild shell
 
-
 Instructions
-------------
-
-To install the lalinference_o2 code version, the `install_lalinference_o2.sh` script in the `lalinference_o2` branch contains all the commands for a standard
-installation on the LIGO Data Grid and can be run as is:
-
-    $ nohup ./install_lalinference_cbc.sh &
-
-The codes will be installed in `~/pe` and published in `~/public_html/pe/build`
-to be viewable on the web.
-
-Manual Installation
 -------------------
 
 To use, first clone this repository into your home directory under
@@ -57,8 +46,25 @@ command is in your `PATH`:
 
     export PATH=$PATH:~/.local/bin
 
-Remember to log out and log back in for the new environment variable to take
-effect. Next, symlink the bundled JHBuild configuration file to
+Remember to log out and log back in for the new environment variable to take effect.
+
+Next, choose wether the `lalinference_o2` code version or more recent code based on `master` should be installed:
+
+### To install the `lalinference_o2` code version
+
+To install the `lalinference_o2` code version, the `install_lalinference_o2.sh` script in the `lalinference_o2` branch contains all the commands for a standard
+installation on the LIGO Data Grid:
+
+    $ cd ~/modulesets
+    $ git checkout lalinference_o2
+    $ nohup ./install_lalinference_cbc.sh &
+
+The codes will be installed in `~/pe` and published in `~/public_html/pe/build`
+to be viewable on the web.
+
+### To install LALSuite based from current `master`
+
+To install more recent versions of LALSuite (instead of `lalinference_o2`), symlink the bundled JHBuild configuration file to
 `~/.config/jhbuildrc`:
 
     $ mkdir -p ~/.config && cd ~/.config && ln -s ~/modulesets/jhbuildrc
@@ -87,11 +93,10 @@ Change installation options (branch, compile flags, ...)
 --------------------------------------------------------
 
 Any file of the name *.jhbuildrc in the configuration directory will be picked
-up by jhbuild and can be used to modify default settings. (See for an example the
-pe.jhbuildrc file). To set a particular branch for a particular package, for instance
-compiling the `lalsimulation package` from the branch `lalinference_o2`, use:
+up by jhbuild and can be used to modify default settings. To set a particular branch for a particular package, for instance
+compiling the `lalsimulation package` from the branch `my_branch`, use:
 
-    $ echo "branches['lalsimulation'] = (None,'lalinference_o2')" >> ~/.config/my.jhbuildrc
+    $ echo "branches['lalsimulation'] = (None,'my_branch')" >> ~/.config/my.jhbuildrc
 
 To set specific compiler flag, such as debug options:
 
@@ -115,12 +120,11 @@ following commands:
 Details
 -------
 
-- The `install_lalinference_cbc.sh` is run on the cbc account of most LDG
+- For `lalinference_o2`, the `install_lalinference_cbc.sh` is run on the cbc account of most LDG
   clusters, and the results are viewable online, for instance
   [here](https://ldas-jobs.ligo.caltech.edu/~cbc/pe/build/).
 
-- Source code for modules is checked out into `~/src` (or `~/pe/src` when using
-  `install_lalinference_o2.sh`).
+- Source code for modules is checked out into `~/src` (or `~/pe/src` when using `install_lalinference_o2.sh`).
 
 - For packages that support building out-of-srcdir, the build directory is
   in `/usr1/$USER/build`, `/local/$USER/build`,
