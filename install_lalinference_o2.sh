@@ -15,7 +15,7 @@ git pull
 # Download and install jhbuild
 mkdir -p ~/pe/src
 if [ ! -d ~/pe/src/jhbuild ]; then
-  git clone git://git.gnome.org/jhbuild ~/pe/src/jhbuild
+  git clone https://gitlab.gnome.org/GNOME/jhbuild.git ~/pe/src/jhbuild
   cd ~/pe/src/jhbuild
   ./autogen.sh --prefix=~/pe/.local/
   make
