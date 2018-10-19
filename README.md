@@ -35,7 +35,7 @@ To use, first clone this repository into your home directory under
 Next, clone and install JHBuild as follows (adapted from
 <http://developer.gnome.org/jhbuild/unstable/getting-started.html.en>):
 
-    $ mkdir -p ~/src && git clone git://git.gnome.org/jhbuild ~/src/jhbuild
+    $ mkdir -p ~/src && git clone git@github.com:GNOME/jhbuild.git ~/src/jhbuild
     $ cd ~/src/jhbuild
     $ ./autogen.sh
     $ make
