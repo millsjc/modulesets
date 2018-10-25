@@ -1,3 +1,10 @@
+
+mkdir -p ~/cosmo/src && git clone git@github.com:GNOME/jhbuild.git ~/cosmo/src/jhbuild
+cd ~/cosmo/src/jhbuild
+./autogen.sh --prefix=~/cosmo/.local
+make
+make install
+
 # symlink the bundled JHBuild configuration file
 mkdir -p ~/cosmo/.config && cd ~/cosmo/.config && ln -s ~/cosmo/modulesets/jhbuildrc
 
