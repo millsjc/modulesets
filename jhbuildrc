@@ -26,7 +26,7 @@ del m, local_modulesets_dir
 modules = [ 'lalsuite', 'gstlal-all', 'bpython' ]
 
 # what directory should the source be checked out to? ~/src
-checkoutroot = '~/src'
+checkoutroot = '~/cosmo/src'
 
 # in what directory should out-of-srcdir builds be performed?
 # Try, in the following order:
@@ -71,7 +71,7 @@ tinderbox_outputdir = os.path.join(buildroot, 'html')
 os.environ['PS1'] = r'\[\033[0;34m\]JHBuild:\[\033[0;32m\]\h:\W \u $\[\033[0m\] '
 
 # the prefix to configure/install modules to (must have write access)
-prefix = '~/local'
+prefix = '~/cosmo/local'
 
 # custom CFLAGS / environment pieces for the build
 # os.environ['CFLAGS'] = '-Wall -g -O0'
