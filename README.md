@@ -4,7 +4,7 @@ JHBuild modulesets for LIGO and open-source astronomy software
 This is a collection of JHBuild (<https://live.gnome.org/Jhbuild>)
 modules for LIGO Parameter Estimation (LALInference, <https://git.ligo.org/lscsoft/lalsuite>).
 
-It is a fork of Leo Singer's (<https://github.com/lpsinger/modulesets>)
+It is a fork of Vivien Raymond's (https://github.com/vivienr/modulesets/) which is a fork of Leo Singer's (<https://github.com/lpsinger/modulesets>)
 personal collection of JHBuild modules for automating build and
 installation of bleeding-edge packages for LIGO data analysis and
 open source astronomy.
