@@ -1,20 +1,22 @@
+DIRNAME=phenomhm
+#sed 's/cosmo/"${DIRNAME}"/g' commands_install_lalsuite.sh -i
 
-mkdir -p ~/cosmo/src && git clone git@github.com:GNOME/jhbuild.git ~/cosmo/src/jhbuild
-cd ~/cosmo/src/jhbuild
-./autogen.sh --prefix=~/cosmo/.local
+mkdir -p ~/"${DIRNAME}"/src && git clone git@github.com:GNOME/jhbuild.git ~/"${DIRNAME}"/src/jhbuild
+cd ~/"${DIRNAME}"/src/jhbuild
+./autogen.sh --prefix=~/"${DIRNAME}"/.local
 make
 make install
 
 # symlink the bundled JHBuild configuration file
-mkdir -p ~/cosmo/.config && cd ~/cosmo/.config && ln -s ~/cosmo/modulesets/jhbuildrc
+mkdir -p ~/"${DIRNAME}"/.config && cd ~/"${DIRNAME}"/.config && ln -s ~/"${DIRNAME}"/modulesets/jhbuildrc
 
 # Install/build lalsuite from anonymous repository
-~/cosmo/.local/bin/jhbuild -f ~/cosmo/.config/jhbuildrc --no-interact tinderbox --output=$HOME/public_html/cosmo/build/ lalsuite
+~/"${DIRNAME}"/.local/bin/jhbuild -f ~/"${DIRNAME}"/.config/jhbuildrc --no-interact build lalsuite
 
 # Move bayeswave as it gets build in source directory
-cp ~/cosmo/src/bayeswave/src/bayeswave* ~/cosmo/local/bin/
+cp ~/"${DIRNAME}"/src/bayeswave/src/bayeswave* ~/"${DIRNAME}"/local/bin/
 
 # Create initisalisation script
-echo '#!/bin/bash' > ~/cosmo/lalinference_o2.sh
-echo "$HOME/cosmo/.local/bin/jhbuild -f $HOME/cosmo/.config/jhbuildrc run \$SHELL --noprofile --norc" >> ~/cosmo/lalinference_o2.sh
-chmod a+x ~/cosmo/lalinference_cosmo.sh
+echo '#!/bin/bash' > ~/"${DIRNAME}"/lalinference_"${DIRNAME}".sh
+echo "$HOME/"${DIRNAME}"/.local/bin/jhbuild -f $HOME/"${DIRNAME}"/.config/jhbuildrc run \$SHELL --noprofile --norc" >> ~/"${DIRNAME}"/lalinference_"${DIRNAME}".sh
+chmod a+x ~/"${DIRNAME}"/lalinference_"${DIRNAME}".sh

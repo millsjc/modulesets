@@ -8,9 +8,9 @@ import getpass
 import inspect
 
 # edit this file to match your settings and copy or symlink it to ~/.config/jhbuildrc
-
+home = '~/phenomhm'
 # module directory
-local_modulesets_dir = '~/cosmo/modulesets'
+local_modulesets_dir = home+'/modulesets'
 
 # what module set should be used.  The default can be found in
 # jhbuild/defaults.jhbuildrc, but can be any file in the modulesets directory
@@ -26,7 +26,7 @@ del m, local_modulesets_dir
 modules = [ 'lalsuite', 'gstlal-all', 'bpython' ]
 
 # what directory should the source be checked out to? ~/src
-checkoutroot = '~/cosmo/src'
+checkoutroot = home+'/src'
 
 # in what directory should out-of-srcdir builds be performed?
 # Try, in the following order:
@@ -71,7 +71,7 @@ tinderbox_outputdir = os.path.join(buildroot, 'html')
 os.environ['PS1'] = r'\[\033[0;34m\]JHBuild:\[\033[0;32m\]\h:\W \u $\[\033[0m\] '
 
 # the prefix to configure/install modules to (must have write access)
-prefix = '~/cosmo/local'
+prefix = home+'/local'
 
 # custom CFLAGS / environment pieces for the build
 # os.environ['CFLAGS'] = '-Wall -g -O0'
